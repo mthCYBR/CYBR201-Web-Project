@@ -1,0 +1,172 @@
+/* --- Core Styling & Smooth Scroll --- */
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+:root {
+    --glass-bg: rgba(255, 255, 255, 0.04);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --accent: #8b5cf6;
+    --accent-glow: rgba(139, 92, 246, 0.4);
+    --text-main: #f1f5f9;
+    --text-dim: #94a3b8;
+}
+
+body {
+    background-color: #020617;
+    color: var(--text-main);
+}
+
+/* Scroll margin so sticky header doesn't cover section titles */
+section {
+    scroll-margin-top: 100px;
+}
+
+/* --- Fixed Mesh Gradient Background --- */
+.mesh-gradient {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background: 
+        radial-gradient(circle at 10% 20%, #1e1b4b 0%, transparent 50%),
+        radial-gradient(circle at 90% 80%, #4c1d95 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, #020617 0%, 100%);
+    filter: blur(60px);
+}
+
+/* --- Sticky Glass Navigation --- */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+nav {
+    display: flex;
+    gap: 0.5rem;
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(12px);
+    padding: 0.5rem;
+    border-radius: 99px;
+    border: 1px solid var(--glass-border);
+}
+
+.nav-link {
+    color: var(--text-dim);
+    text-decoration: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 99px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--text-main);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.nav-link.active {
+    background: var(--accent);
+    color: white;
+    box-shadow: 0 4px 15px var(--accent-glow);
+}
+
+/* --- Layout Elements --- */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    border-radius: 28px;
+    padding: 3rem;
+    margin-bottom: 3rem;
+}
+
+.hero { text-align: center; }
+.tagline { color: var(--accent); font-weight: 600; margin-bottom: 1.5rem; letter-spacing: 1px; }
+
+h1 { font-size: 3rem; margin-bottom: 0.5rem; }
+h2 { font-size: 1.8rem; margin-bottom: 1.5rem; }
+h3 { color: var(--accent); margin-bottom: 0.5rem; }
+
+p { line-height: 1.8; color: var(--text-dim); margin-bottom: 1rem; }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.grid-item {
+    background: rgba(255,255,255,0.02);
+    padding: 1.5rem;
+    border-radius: 20px;
+    border: 1px solid var(--glass-border);
+}
+
+/* --- Images --- */
+.featured-img, .content-img {
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+    object-fit: cover;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid var(--accent);
+    margin-bottom: 1rem;
+}
+
+/* --- Personal Section --- */
+.personal-grid {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+}
+
+.section-divider {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--glass-border), transparent);
+    margin: 4rem 0;
+}
+
+.member-list { list-style: none; }
+.member-list li { padding: 0.75rem 0; border-bottom: 1px solid var(--glass-border); }
+
+footer {
+    text-align: center;
+    padding: 4rem;
+    color: var(--text-dim);
+    font-size: 0.8rem;
+}
+
+/* --- Responsive --- */
+@media (max-width: 800px) {
+    .personal-grid { grid-template-columns: 1fr; }
+    h1 { font-size: 2.2rem; }
+    nav { flex-wrap: wrap; justify-content: center; }
+}

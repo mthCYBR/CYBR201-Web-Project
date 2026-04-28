@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrustSec AI Lab | Dr. Nour Alhussien</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="mesh-gradient"></div>
+
+    <header>
+        <nav role="navigation" aria-label="Main Navigation">
+            <a href="#lab-hero" class="nav-link">Home</a>
+            <a href="#research" class="nav-link">Research</a>
+            <a href="#team" class="nav-link">Team</a>
+            <a href="#about" class="nav-link">About Dr. Alhussien</a>
+            <a href="#education" class="nav-link">Education</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="lab-hero">
+            <div class="glass-card hero">
+                <h1>TrustSec AI Lab</h1>
+                <p class="tagline">Advancing the intersection of AI and Cybersecurity</p>
+                <img src="photo3.jpg" alt="Modern computer lab workspace" class="featured-img">
+                <article>
+                    <h2>Our Mission</h2>
+                    <p>We develop robust and resilient artificial intelligence (AI) models to detect, withstand, and mitigate emerging AI-driven cyber threats. Our work ensures digital systems remain reliable and worthy of trust across societal and mission-critical operations.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="research">
+            <div class="glass-card">
+                <h2>Research Focus Areas</h2>
+                <div class="grid">
+                    <div class="grid-item">
+                        <h3>Adversarial AI</h3>
+                        <p>Designing defenses to protect AI systems—such as fraud detection and network intrusion sensors—from adversarial manipulation and attacks.</p>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Large Language Models</h3>
+                        <p>Identifying vulnerabilities to prompt-injection and jailbreaking while mitigating hallucinations in RAG pipelines.</p>
+                    </div>
+                    <div class="grid-item">
+                        <h3>IoT & Privacy</h3>
+                        <p>Enhancing privacy in health-centric IoT ecosystems using generative models for anonymization and differential privacy.</p>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Network Security</h3>
+                        <p>Threat detection across complex, distributed environments using deep learning and behavioral analytics.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="team">
+            <div class="glass-card">
+                <h2>The Lab Team</h2>
+                <img src="photo2.jpg" alt="Dr. Alhussien mentoring students" class="content-img">
+                <p>The lab is open to students with Python experience who are passionate about exploring trending research in trustworthy AI.</p>
+                <ul class="member-list">
+                    <li><strong>Nour Alhussien, PhD</strong> — Director & Assistant Professor</li>
+                    <li><strong>Rubyat Tasnuva Hasan</strong> — Ph.D. Student</li>
+                    <li><strong>Kumi Peters</strong> — Undergraduate Student</li>
+                </ul>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <section id="about">
+            <div class="personal-grid">
+                <aside class="glass-card profile">
+                    <img src="photo1.JPG" alt="Dr. Nour Alhussien" class="profile-img">
+                    <h2>Dr. Nour Alhussien</h2>
+                    <p>Assistant Professor, Cybersecurity</p>
+                    <hr>
+                    <p><strong>Office:</strong> ETEC 2601</p>
+                    <p><strong>Email:</strong> <a href="mailto:nalhussien@albany.edu">nalhussien@albany.edu</a></p>
+                </aside>
+
+                <div class="bio-content">
+                    <article class="glass-card">
+                        <h2>Professional Profile</h2>
+                        <p>Dr. Alhussien is an Assistant Professor in the Department of Cybersecurity at the College of Emergency Preparedness, Homeland Security, and Cybersecurity, University at Albany (SUNY). She directs the TrustSec AI Lab and is an active member of the Women in Cybersecurity (WiCyS) community.</p>
+                        <p>Her research has been published in leading venues such as IEEE Transactions and presented at conferences including IEEE NOMS and TrustCom.</p>
+                    </article>
+
+                    <section id="education">
+                        <article class="glass-card">
+                            <h2>Education & Instruction</h2>
+                            <h3>Academic Background</h3>
+                            <ul>
+                                <li><strong>PhD in Computer and Cyber Sciences</strong> — Augusta University</li>
+                                <li><strong>MS in Computer Information Systems</strong> — Yarmouk University, Jordan</li>
+                                <li><strong>BS in Computer Information Systems</strong> — Yarmouk University, Jordan</li>
+                            </ul>
+                            <h3 style="margin-top: 1.5rem;">Courses Taught</h3>
+                            <p>Web Technologies Essentials: Security and Design</p>
+                        </article>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 TrustSec AI Lab | University at Albany</p>
+    </footer>
+
+    <script>
+        // Optional: Simple scroll-spy to highlight the active tab
+        window.addEventListener('scroll', () => {
+            let current = "";
+            const sections = document.querySelectorAll("section");
+            sections.forEach((section) => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 150) {
+                    current = section.getAttribute("id");
+                }
+            });
+
+            document.querySelectorAll(".nav-link").forEach((a) => {
+                a.classList.remove("active");
+                if (a.getAttribute("href").includes(current)) {
+                    a.classList.add("active");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
