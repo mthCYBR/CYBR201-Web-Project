@@ -1,4 +1,4 @@
-/* --- Core Styling & Smooth Scroll --- */
+
 html {
     scroll-behavior: smooth;
 }
@@ -24,12 +24,12 @@ body {
     color: var(--text-main);
 }
 
-/* Scroll margin so sticky header doesn't cover section titles */
+
 section {
     scroll-margin-top: 100px;
 }
 
-/* --- Fixed Mesh Gradient Background --- */
+
 .mesh-gradient {
     position: fixed;
     top: 0;
@@ -44,7 +44,7 @@ section {
     filter: blur(60px);
 }
 
-/* --- Sticky Glass Navigation --- */
+/* --- Sticky Glass --- */
 header {
     position: sticky;
     top: 0;
@@ -85,7 +85,7 @@ nav {
     box-shadow: 0 4px 15px var(--accent-glow);
 }
 
-/* --- Layout Elements --- */
+
 main {
     max-width: 1000px;
     margin: 0 auto;
@@ -140,7 +140,7 @@ p { line-height: 1.8; color: var(--text-dim); margin-bottom: 1rem; }
     margin-bottom: 1rem;
 }
 
-/* --- Personal Section --- */
+
 .personal-grid {
     display: grid;
     grid-template-columns: 300px 1fr;
@@ -164,7 +164,7 @@ footer {
     font-size: 0.8rem;
 }
 
-/* --- Responsive --- */
+
 @media (max-width: 800px) {
     .personal-grid { grid-template-columns: 1fr; }
     h1 { font-size: 2.2rem; }
